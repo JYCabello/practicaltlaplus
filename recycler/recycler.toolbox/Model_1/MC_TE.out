@@ -2,7 +2,7 @@
 TLC2 Version 2.15 of Day Month 20?? (rev: eb3ff99)
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with fp 124 and seed 8907441307331763215 with 4 workers on 8 cores with 2398MB heap and 5392MB offheap memory [pid: 7488] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+Running breadth-first search Model-Checking with fp 98 and seed 8262041832354706437 with 6 workers on 12 cores with 2412MB heap and 5422MB offheap memory [pid: 10676] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
@@ -26,103 +26,188 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2020-11-02 15:11:15)
+Starting... (2020-11-05 17:49:18)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
 @!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 2 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 4 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 8 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 16 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 32 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 64 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 128 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 256 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 512 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 1024 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 2048 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 4096 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 8192 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 16384 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 32768 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 65536 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 131072 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 262144 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 524288 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 1048576 initial states...
+@!@!@ENDMSG 2269 @!@!@
 @!@!@STARTMSG 2190:0 @!@!@
-Finished computing initial states: 1 distinct state generated at 2020-11-02 15:11:16.
+Finished computing initial states: 2073600 distinct states generated at 2020-11-05 17:49:25.
 @!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(2) at 2020-11-05 17:49:28: 3.054.990 states generated (3.054.990 s/min), 2.654.014 distinct states found (2.654.014 ds/min), 1.672.700 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2193:0 @!@!@
 Model checking completed. No error has been found.
   Estimates of the probability that TLC did not check all reachable states
   because two distinct states had the same fingerprint:
-  calculated (optimistic):  val = 3.3E-19
+  calculated (optimistic):  val = 5.8E-7
+  based on the actual fingerprints:  val = 1.4E-6
 @!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2020-11-02 15:11:16
+The coverage statistics at 2020-11-05 17:49:40
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2773:0 @!@!@
-<Init line 41, col 1 to line 41, col 4 of module recycler>: 1:1
+<Init line 37, col 1 to line 37, col 4 of module recycler>: 2073600:2073600
 @!@!@ENDMSG 2773 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 42, col 9 to line 51, col 23 of module recycler: 1
+  line 38, col 12 to line 38, col 54 of module recycler: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 39, col 12 to line 39, col 52 of module recycler: 100
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 40, col 12 to line 40, col 47 of module recycler: 100
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 41, col 12 to line 41, col 58 of module recycler: 100
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 42, col 12 to line 42, col 49 of module recycler: 100
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 43, col 12 to line 43, col 23 of module recycler: 2073600
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Lbl_1 line 53, col 1 to line 53, col 5 of module recycler>: 5:5
+<Lbl_1 line 45, col 1 to line 45, col 5 of module recycler>: 3062536:5031026
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 53, col 13 to line 53, col 24 of module recycler: 11
+  line 45, col 13 to line 45, col 24 of module recycler: 10167162
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 53, col 13 to line 53, col 14 of module recycler: 6
+  |line 45, col 13 to line 45, col 14 of module recycler: 5136136
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 54, col 16 to line 54, col 28 of module recycler: 5
+  line 46, col 16 to line 46, col 28 of module recycler: 5031026
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 56, col 29 to line 56, col 48 of module recycler: 4
+  line 48, col 29 to line 48, col 48 of module recycler: 4925916
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 57, col 32 to line 57, col 90 of module recycler: 4
+  line 49, col 32 to line 49, col 90 of module recycler: 4925916
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 57, col 32 to line 57, col 55 of module recycler: 4
+  |line 49, col 32 to line 49, col 55 of module recycler: 4925916
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 57, col 60 to line 57, col 90 of module recycler: 3
+  |line 49, col 60 to line 49, col 90 of module recycler: 2462958
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 58, col 37 to line 60, col 98 of module recycler: 2
+  line 50, col 37 to line 52, col 98 of module recycler: 1346855
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 61, col 43 to line 61, col 71 of module recycler: 2
+  line 53, col 43 to line 53, col 71 of module recycler: 3579061
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 62, col 48 to line 64, col 105 of module recycler: 2
+  line 54, col 48 to line 56, col 105 of module recycler: 1866715
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 66, col 51 to line 67, col 71 of module recycler: 0
+  line 57, col 51 to line 57, col 54 of module recycler: 1712346
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 68, col 24 to line 68, col 36 of module recycler: 4
+  line 58, col 51 to line 59, col 71 of module recycler: 1712346
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 69, col 24 to line 70, col 75 of module recycler: 1
+  line 60, col 24 to line 60, col 36 of module recycler: 4925916
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 71, col 24 to line 72, col 75 of module recycler: 1
+  line 61, col 24 to line 62, col 75 of module recycler: 105110
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 73, col 24 to line 74, col 75 of module recycler: 1
+  line 63, col 24 to line 64, col 75 of module recycler: 105110
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 75, col 24 to line 75, col 35 of module recycler: 1
+  line 65, col 24 to line 66, col 75 of module recycler: 105110
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 76, col 24 to line 76, col 67 of module recycler: 1
+  line 67, col 24 to line 67, col 35 of module recycler: 105110
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 24 to line 68, col 67 of module recycler: 105110
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 69, col 13 to line 69, col 24 of module recycler: 5031026
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Terminating line 79, col 1 to line 79, col 11 of module recycler>: 0:1
+<Terminating line 72, col 1 to line 72, col 11 of module recycler>: 0:105110
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 79, col 16 to line 79, col 26 of module recycler: 7
+  line 72, col 16 to line 72, col 26 of module recycler: 5241246
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 79, col 16 to line 79, col 17 of module recycler: 6
+  |line 72, col 16 to line 72, col 17 of module recycler: 5136136
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 79, col 31 to line 79, col 44 of module recycler: 1
+  line 72, col 31 to line 72, col 44 of module recycler: 105110
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(6) at 2020-11-02 15:11:16: 7 states generated (303 s/min), 6 distinct states found (260 ds/min), 0 states left on queue.
+Progress(6) at 2020-11-05 17:49:40: 7.209.736 states generated (18.074.798 s/min), 5.136.136 distinct states found (12.876.286 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
-7 states generated, 6 distinct states found, 0 states left on queue.
+7209736 states generated, 5136136 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
 @!@!@STARTMSG 2194:0 @!@!@
 The depth of the complete state graph search is 6.
@@ -131,5 +216,5 @@ The depth of the complete state graph search is 6.
 The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 1 and the 95th percentile is 1).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 1393ms at (2020-11-02 15:11:16)
+Finished in 23963ms at (2020-11-05 17:49:40)
 @!@!@ENDMSG 2186 @!@!@
