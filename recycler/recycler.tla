@@ -6,7 +6,16 @@ variables
     bins = [trash |-> <<>>, recycle |-> <<>>],
     count = [trash |-> 0, recycle |-> 0],
     item = [type: {"trash", "recycle"}, size: 1..6],
-    items \in item \X item \X item \X item;
+    items \in SetsOfFour(item);
+    
+define
+    SetsOfFour(set) == set \X set \X set \X set
+    NoBinOverflow == capacity.trash >= 0 /\ capacity.recycle >= 0
+    CountsMatchUp == 
+        /\ Len(bins.trash) = count.trash
+        /\ Len(bins.recycle) = count.recycle
+    Invariant == NoBinOverflow /\ CountsMatchUp
+end define;
     
 macro add_item(type, current) begin
   bins[type] := Append(bins[type], current);
@@ -29,8 +38,17 @@ begin
      assert Len(bins.trash) = count.trash;
      assert Len(bins.recycle) = count.recycle;
 end algorithm; *)
-\* BEGIN TRANSLATION - the hash of the PCal code: PCal-f9489c3f47f950586084f5f167e55d36
+\* BEGIN TRANSLATION - the hash of the PCal code: PCal-40d3341b3fd77f776805309f2ed61a8b
 VARIABLES capacity, bins, count, item, items, pc
+
+(* define statement *)
+SetsOfFour(set) == set \X set \X set \X set
+NoBinOverflow == capacity.trash >= 0 /\ capacity.recycle >= 0
+CountsMatchUp ==
+    /\ Len(bins.trash) = count.trash
+    /\ Len(bins.recycle) = count.recycle
+Invariant == NoBinOverflow /\ CountsMatchUp
+
 
 vars == << capacity, bins, count, item, items, pc >>
 
@@ -39,7 +57,7 @@ Init == (* Global variables *)
         /\ bins = [trash |-> <<>>, recycle |-> <<>>]
         /\ count = [trash |-> 0, recycle |-> 0]
         /\ item = [type: {"trash", "recycle"}, size: 1..6]
-        /\ items \in item \X item \X item \X item
+        /\ items \in SetsOfFour(item)
         /\ pc = "Lbl_1"
 
 Lbl_1 == /\ pc = "Lbl_1"
@@ -59,11 +77,11 @@ Lbl_1 == /\ pc = "Lbl_1"
                                                                count >>
                     /\ pc' = "Lbl_1"
                ELSE /\ Assert(capacity.trash > -1 /\ capacity.recycle > -1, 
-                              "Failure of assertion at line 28, column 6.")
+                              "Failure of assertion at line 37, column 6.")
                     /\ Assert(Len(bins.trash) = count.trash, 
-                              "Failure of assertion at line 29, column 6.")
+                              "Failure of assertion at line 38, column 6.")
                     /\ Assert(Len(bins.recycle) = count.recycle, 
-                              "Failure of assertion at line 30, column 6.")
+                              "Failure of assertion at line 39, column 6.")
                     /\ pc' = "Done"
                     /\ UNCHANGED << capacity, bins, count, items >>
          /\ item' = item
@@ -78,5 +96,5 @@ Spec == Init /\ [][Next]_vars
 
 Termination == <>(pc = "Done")
 
-\* END TRANSLATION - the hash of the generated TLA code (remove to silence divergence warnings): TLA-34b2168ae5374864c372f1832b2bcc47
+\* END TRANSLATION - the hash of the generated TLA code (remove to silence divergence warnings): TLA-48aceda1aef2a0bb680983c0bed8c842
 =============================================================================
