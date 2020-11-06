@@ -9,7 +9,7 @@ variables
     items \in SetsOfFour(item);
     
 define
-    SetsOfFour(set) == set \X set \X set \X set \X set
+    SetsOfFour(set) == set \X set \X set \X set
     NoBinOverflow == capacity.trash >= 0 /\ capacity.recycle >= 0
     CountsMatchUp == 
         /\ Len(bins.trash) = count.trash
@@ -38,11 +38,11 @@ begin
      assert Len(bins.trash) = count.trash;
      assert Len(bins.recycle) = count.recycle;
 end algorithm; *)
-\* BEGIN TRANSLATION - the hash of the PCal code: PCal-181bdb41c7cb5f24c80dace0ca793393
+\* BEGIN TRANSLATION - the hash of the PCal code: PCal-40d3341b3fd77f776805309f2ed61a8b
 VARIABLES capacity, bins, count, item, items, pc
 
 (* define statement *)
-SetsOfFour(set) == set \X set \X set \X set \X set
+SetsOfFour(set) == set \X set \X set \X set
 NoBinOverflow == capacity.trash >= 0 /\ capacity.recycle >= 0
 CountsMatchUp ==
     /\ Len(bins.trash) = count.trash
@@ -96,5 +96,5 @@ Spec == Init /\ [][Next]_vars
 
 Termination == <>(pc = "Done")
 
-\* END TRANSLATION - the hash of the generated TLA code (remove to silence divergence warnings): TLA-315da6b3cfcec81d584830266b8e8075
+\* END TRANSLATION - the hash of the generated TLA code (remove to silence divergence warnings): TLA-48aceda1aef2a0bb680983c0bed8c842
 =============================================================================
