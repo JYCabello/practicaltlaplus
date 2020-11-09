@@ -1,22 +1,22 @@
 ------------------------------- MODULE flags -------------------------------
-EXTENDS TLC
+EXTENDS TLC, Integers, Sequences, FiniteSets
 Flags == {"f1", "f2"}
 (*--algorithm flags
 variables
-  flags = [f \in Flags |-> FALSE];
+  flags \in {config \in [Flags -> BOOLEAN]: \E f \in Flags: config[f]};
 begin
     with f \in Flags do
         flags[f] := TRUE;
     end with;
     print flags
 end algorithm; *)
-\* BEGIN TRANSLATION - the hash of the PCal code: PCal-472e69f9ef3f8bb3c2304ebf00880783
+\* BEGIN TRANSLATION - the hash of the PCal code: PCal-ade1e31a5a07d33d67ca193fa875661e
 VARIABLES flags, pc
 
 vars == << flags, pc >>
 
 Init == (* Global variables *)
-        /\ flags = [f \in Flags |-> FALSE]
+        /\ flags \in {config \in [Flags -> BOOLEAN]: \E f \in Flags: config[f]}
         /\ pc = "Lbl_1"
 
 Lbl_1 == /\ pc = "Lbl_1"
@@ -35,6 +35,6 @@ Spec == Init /\ [][Next]_vars
 
 Termination == <>(pc = "Done")
 
-\* END TRANSLATION - the hash of the generated TLA code (remove to silence divergence warnings): TLA-b4abd3153b2182229ac49f0ccca86359
+\* END TRANSLATION - the hash of the generated TLA code (remove to silence divergence warnings): TLA-cb3b89f8099a3dd65bdcb6886a599a72
 
 =============================================================================

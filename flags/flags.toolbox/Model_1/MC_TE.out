@@ -2,7 +2,7 @@
 TLC2 Version 2.15 of Day Month 20?? (rev: eb3ff99)
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with fp 108 and seed -5520375524001841144 with 6 workers on 12 cores with 2412MB heap and 5422MB offheap memory [pid: 18028] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+Running breadth-first search Model-Checking with fp 36 and seed 9092866130837581771 with 4 workers on 8 cores with 2398MB heap and 5392MB offheap memory [pid: 19752] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
@@ -11,92 +11,116 @@ Parsing file C:\PrivateRepos\practicaltlaplus\flags\flags.toolbox\Model_1\MC.tla
 Parsing file C:\PrivateRepos\practicaltlaplus\flags\flags.toolbox\Model_1\flags.tla
 Labels added.
 Parsing file C:\Users\yeray\tla\toolbox\plugins\org.lamport.tlatools_1.0.0.202004251858\tla2sany\StandardModules\TLC.tla
-Parsing file C:\Users\yeray\tla\toolbox\plugins\org.lamport.tlatools_1.0.0.202004251858\tla2sany\StandardModules\Naturals.tla
+Parsing file C:\Users\yeray\tla\toolbox\plugins\org.lamport.tlatools_1.0.0.202004251858\tla2sany\StandardModules\Integers.tla
 Parsing file C:\Users\yeray\tla\toolbox\plugins\org.lamport.tlatools_1.0.0.202004251858\tla2sany\StandardModules\Sequences.tla
 Parsing file C:\Users\yeray\tla\toolbox\plugins\org.lamport.tlatools_1.0.0.202004251858\tla2sany\StandardModules\FiniteSets.tla
+Parsing file C:\Users\yeray\tla\toolbox\plugins\org.lamport.tlatools_1.0.0.202004251858\tla2sany\StandardModules\Naturals.tla
 Semantic processing of module Naturals
 Semantic processing of module Sequences
 Semantic processing of module FiniteSets
 Semantic processing of module TLC
+Semantic processing of module Integers
 Semantic processing of module flags
 Semantic processing of module MC
 @!@!@STARTMSG 2219:0 @!@!@
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2020-11-06 21:22:42)
+Starting... (2020-11-09 13:47:34)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
 @!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 2 initial states...
+@!@!@ENDMSG 2269 @!@!@
 @!@!@STARTMSG 2190:0 @!@!@
-Finished computing initial states: 1 distinct state generated at 2020-11-06 21:22:43.
+Finished computing initial states: 3 distinct states generated at 2020-11-09 13:47:35.
 @!@!@ENDMSG 2190 @!@!@
+[f1 |-> TRUE, f2 |-> TRUE]
+[f1 |-> TRUE, f2 |-> TRUE]
 [f1 |-> TRUE, f2 |-> FALSE]
 [f1 |-> FALSE, f2 |-> TRUE]
+[f1 |-> TRUE, f2 |-> TRUE]
+[f1 |-> TRUE, f2 |-> TRUE]
 @!@!@STARTMSG 2193:0 @!@!@
 Model checking completed. No error has been found.
   Estimates of the probability that TLC did not check all reachable states
   because two distinct states had the same fingerprint:
-  calculated (optimistic):  val = 3.3E-19
+  calculated (optimistic):  val = 2.0E-18
 @!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2020-11-06 21:22:43
+The coverage statistics at 2020-11-09 13:47:35
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2773:0 @!@!@
-<Init line 18, col 1 to line 18, col 4 of module flags>: 1:1
+<Init line 18, col 1 to line 18, col 4 of module flags>: 3:3
 @!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  line 19, col 22 to line 19, col 79 of module flags: 1:4
+@!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 19, col 9 to line 20, col 23 of module flags: 1
+  |line 19, col 54 to line 19, col 78 of module flags: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 19, col 70 to line 19, col 78 of module flags: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 19, col 63 to line 19, col 67 of module flags: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  |line 19, col 34 to line 19, col 51 of module flags: 1:8
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 20, col 12 to line 20, col 23 of module flags: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Lbl_1 line 22, col 1 to line 22, col 5 of module flags>: 2:2
+<Lbl_1 line 22, col 1 to line 22, col 5 of module flags>: 3:6
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 22, col 13 to line 22, col 24 of module flags: 4
+  line 22, col 13 to line 22, col 24 of module flags: 9
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 22, col 13 to line 22, col 14 of module flags: 3
+  |line 22, col 13 to line 22, col 14 of module flags: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 24, col 15 to line 24, col 49 of module flags: 2
+  line 24, col 15 to line 24, col 49 of module flags: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 23, col 22 to line 23, col 26 of module flags: 1
+  line 23, col 22 to line 23, col 26 of module flags: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 25, col 13 to line 25, col 26 of module flags: 2
+  line 25, col 13 to line 25, col 26 of module flags: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 26, col 13 to line 26, col 24 of module flags: 2
+  line 26, col 13 to line 26, col 24 of module flags: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Terminating line 29, col 1 to line 29, col 11 of module flags>: 0:2
+<Terminating line 29, col 1 to line 29, col 11 of module flags>: 0:3
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 29, col 16 to line 29, col 26 of module flags: 5
+  line 29, col 16 to line 29, col 26 of module flags: 9
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 29, col 16 to line 29, col 17 of module flags: 3
+  |line 29, col 16 to line 29, col 17 of module flags: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 29, col 31 to line 29, col 44 of module flags: 2
+  line 29, col 31 to line 29, col 44 of module flags: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(2) at 2020-11-06 21:22:43: 5 states generated (260 s/min), 3 distinct states found (156 ds/min), 0 states left on queue.
+Progress(2) at 2020-11-09 13:47:35: 12 states generated (672 s/min), 6 distinct states found (336 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
-5 states generated, 3 distinct states found, 0 states left on queue.
+12 states generated, 6 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
 @!@!@STARTMSG 2194:0 @!@!@
 The depth of the complete state graph search is 2.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2268:0 @!@!@
-The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 2).
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 1 and the 95th percentile is 1).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 1158ms at (2020-11-06 21:22:43)
+Finished in 1076ms at (2020-11-09 13:47:35)
 @!@!@ENDMSG 2186 @!@!@
