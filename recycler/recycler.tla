@@ -6,10 +6,10 @@ variables
     bins = [trash |-> <<>>, recycle |-> <<>>],
     count = [trash |-> 0, recycle |-> 0],
     item = [type: {"trash", "recycle"}, size: 1..6],
-    items \in SetsOfFour(item);
+    items \in SetsOf(item, 4);
     
 define
-    SetsOfFour(set) == set \X set \X set \X set
+    SetsOf(set, amount) == [1..amount -> set]
     NoBinOverflow == capacity.trash >= 0 /\ capacity.recycle >= 0
     CountsMatchUp == 
         /\ Len(bins.trash) = count.trash
@@ -38,11 +38,11 @@ begin
      assert Len(bins.trash) = count.trash;
      assert Len(bins.recycle) = count.recycle;
 end algorithm; *)
-\* BEGIN TRANSLATION - the hash of the PCal code: PCal-40d3341b3fd77f776805309f2ed61a8b
+\* BEGIN TRANSLATION - the hash of the PCal code: PCal-89be97b552f6db5adcca0fee7dc6d305
 VARIABLES capacity, bins, count, item, items, pc
 
 (* define statement *)
-SetsOfFour(set) == set \X set \X set \X set
+SetsOf(set, amount) == [1..amount -> set]
 NoBinOverflow == capacity.trash >= 0 /\ capacity.recycle >= 0
 CountsMatchUp ==
     /\ Len(bins.trash) = count.trash
@@ -57,7 +57,7 @@ Init == (* Global variables *)
         /\ bins = [trash |-> <<>>, recycle |-> <<>>]
         /\ count = [trash |-> 0, recycle |-> 0]
         /\ item = [type: {"trash", "recycle"}, size: 1..6]
-        /\ items \in SetsOfFour(item)
+        /\ items \in SetsOf(item, 4)
         /\ pc = "Lbl_1"
 
 Lbl_1 == /\ pc = "Lbl_1"
@@ -96,5 +96,5 @@ Spec == Init /\ [][Next]_vars
 
 Termination == <>(pc = "Done")
 
-\* END TRANSLATION - the hash of the generated TLA code (remove to silence divergence warnings): TLA-48aceda1aef2a0bb680983c0bed8c842
+\* END TRANSLATION - the hash of the generated TLA code (remove to silence divergence warnings): TLA-56c272f0886ea3e64749f2f1661e55b0
 =============================================================================

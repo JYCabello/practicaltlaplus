@@ -2,7 +2,7 @@
 TLC2 Version 2.15 of Day Month 20?? (rev: eb3ff99)
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with fp 105 and seed 2942060847670714560 with 4 workers on 8 cores with 2398MB heap and 5392MB offheap memory [pid: 16428] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+Running breadth-first search Model-Checking with fp 68 and seed -5479134626917750962 with 4 workers on 8 cores with 2398MB heap and 5392MB offheap memory [pid: 20124] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
@@ -26,7 +26,7 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2020-11-06 15:31:05)
+Starting... (2020-11-09 13:10:09)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
@@ -91,246 +91,24 @@ Computed 524288 initial states...
 @!@!@STARTMSG 2269:0 @!@!@
 Computed 1048576 initial states...
 @!@!@ENDMSG 2269 @!@!@
-@!@!@STARTMSG 2269:0 @!@!@
-Computed 2097152 initial states...
-@!@!@ENDMSG 2269 @!@!@
-@!@!@STARTMSG 2269:0 @!@!@
-Computed 4194304 initial states...
-@!@!@ENDMSG 2269 @!@!@
-@!@!@STARTMSG 2269:0 @!@!@
-Computed 8388608 initial states...
-@!@!@ENDMSG 2269 @!@!@
-@!@!@STARTMSG 2269:0 @!@!@
-Computed 16777216 initial states...
-@!@!@ENDMSG 2269 @!@!@
 @!@!@STARTMSG 2190:0 @!@!@
-Finished computing initial states: 24883200 distinct states generated at 2020-11-06 15:32:49.
+Finished computing initial states: 2073600 distinct states generated at 2020-11-09 13:10:17.
 @!@!@ENDMSG 2190 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(2) at 2020-11-06 15:32:52: 25.283.148 states generated (25.283.148 s/min), 24.945.408 distinct states found (24.945.408 ds/min), 24.545.396 states left on queue.
+Progress(2) at 2020-11-09 13:10:20: 3.102.765 states generated (3.102.765 s/min), 2.696.617 distinct states found (2.696.617 ds/min), 1.667.516 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
-@!@!@STARTMSG 2200:0 @!@!@
-Progress(2) at 2020-11-06 15:33:52: 41.386.738 states generated (16.103.590 s/min), 36.389.340 distinct states found (11.443.932 ds/min), 19.885.820 states left on queue.
-@!@!@ENDMSG 2200 @!@!@
-@!@!@STARTMSG 2200:0 @!@!@
-Progress(3) at 2020-11-06 15:34:52: 56.239.698 states generated (14.852.960 s/min), 46.937.864 distinct states found (10.548.524 ds/min), 15.581.372 states left on queue.
-@!@!@ENDMSG 2200 @!@!@
-@!@!@STARTMSG 2200:0 @!@!@
-Progress(4) at 2020-11-06 15:35:52: 72.309.308 states generated (16.069.610 s/min), 55.784.565 distinct states found (8.846.701 ds/min), 8.358.477 states left on queue.
-@!@!@ENDMSG 2200 @!@!@
-@!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2020-11-06 15:35:52
-@!@!@ENDMSG 2201 @!@!@
-@!@!@STARTMSG 2773:0 @!@!@
-<Init line 55, col 1 to line 55, col 4 of module recycler>: 24883200:24883200
-@!@!@ENDMSG 2773 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 56, col 12 to line 56, col 54 of module recycler: 1
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 57, col 12 to line 57, col 52 of module recycler: 100
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 58, col 12 to line 58, col 47 of module recycler: 100
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 59, col 12 to line 59, col 58 of module recycler: 100
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 60, col 22 to line 60, col 37 of module recycler: 100
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2775:0 @!@!@
-  |line 45, col 20 to line 45, col 50 of module recycler: 100:124416000
-@!@!@ENDMSG 2775 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 60, col 33 to line 60, col 36 of module recycler: 500
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 61, col 12 to line 61, col 23 of module recycler: 24883200
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2772:0 @!@!@
-<Lbl_1 line 63, col 1 to line 63, col 5 of module recycler>: 30901680:47427511
-@!@!@ENDMSG 2772 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 63, col 13 to line 63, col 24 of module recycler: 94855327
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 63, col 13 to line 63, col 14 of module recycler: 47427679
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 64, col 16 to line 64, col 28 of module recycler: 47427697
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 64, col 16 to line 64, col 20 of module recycler: 47427711
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 64, col 25 to line 64, col 28 of module recycler: 47427716
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 66, col 29 to line 66, col 48 of module recycler: 47427730
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 66, col 38 to line 66, col 48 of module recycler: 47427741
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 67, col 32 to line 67, col 90 of module recycler: 47427750
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 67, col 32 to line 67, col 55 of module recycler: 47427765
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||line 67, col 32 to line 67, col 43 of module recycler: 47427778
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 67, col 32 to line 67, col 38 of module recycler: 47427793
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 67, col 60 to line 67, col 90 of module recycler: 23713602
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||line 67, col 60 to line 67, col 71 of module recycler: 23713621
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 67, col 60 to line 67, col 66 of module recycler: 23713690
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||line 65, col 39 to line 65, col 49 of module recycler: 23713707
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||line 67, col 75 to line 67, col 90 of module recycler: 23713738
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 67, col 75 to line 67, col 82 of module recycler: 23713778
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 68, col 40 to line 68, col 108 of module recycler: 13888982
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 68, col 48 to line 68, col 108 of module recycler: 13889005
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||line 68, col 49 to line 68, col 52 of module recycler: 13889012
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||line 68, col 76 to line 68, col 107 of module recycler: 13889020
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 68, col 83 to line 68, col 97 of module recycler: 13889026
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 68, col 100 to line 68, col 106 of module recycler: 13889040
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||line 65, col 39 to line 65, col 49 of module recycler: 13889053
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 69, col 40 to line 69, col 118 of module recycler: 13889064
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 69, col 52 to line 69, col 118 of module recycler: 13905792
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||line 69, col 53 to line 69, col 60 of module recycler: 13905792
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||line 69, col 84 to line 69, col 117 of module recycler: 13905792
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 69, col 84 to line 69, col 102 of module recycler: 13905792
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||line 69, col 84 to line 69, col 91 of module recycler: 13905792
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 69, col 106 to line 69, col 117 of module recycler: 13905792
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 70, col 40 to line 70, col 98 of module recycler: 13905792
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 70, col 49 to line 70, col 98 of module recycler: 13905792
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||line 70, col 50 to line 70, col 54 of module recycler: 13905792
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||line 70, col 78 to line 70, col 97 of module recycler: 13905792
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 70, col 78 to line 70, col 93 of module recycler: 13905792
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||line 70, col 78 to line 70, col 82 of module recycler: 13905792
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 71, col 43 to line 71, col 71 of module recycler: 33649753
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 72, col 48 to line 74, col 105 of module recycler: 18419328
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 75, col 51 to line 75, col 54 of module recycler: 15186672
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 76, col 51 to line 77, col 71 of module recycler: 15119712
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 78, col 24 to line 78, col 36 of module recycler: 47555605
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 85, col 24 to line 85, col 35 of module recycler: 0
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 86, col 24 to line 86, col 67 of module recycler: 0
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 87, col 13 to line 87, col 24 of module recycler: 47555634
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 87, col 21 to line 87, col 24 of module recycler: 47555644
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2772:0 @!@!@
-<Terminating line 90, col 1 to line 90, col 11 of module recycler>: 0:0
-@!@!@ENDMSG 2772 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 90, col 16 to line 90, col 26 of module recycler: 47555698
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 90, col 16 to line 90, col 17 of module recycler: 47555707
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 90, col 31 to line 90, col 44 of module recycler: 0
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2774:0 @!@!@
-<Invariant line 50, col 1 to line 50, col 9 of module recycler>
-@!@!@ENDMSG 2774 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 50, col 14 to line 50, col 43 of module recycler: 55825055
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 50, col 14 to line 50, col 26 of module recycler: 55825055
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||line 46, col 18 to line 46, col 61 of module recycler: 55825054
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 50, col 31 to line 50, col 43 of module recycler: 55825054
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2202:0 @!@!@
-End of statistics.
-@!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2193:0 @!@!@
 Model checking completed. No error has been found.
   Estimates of the probability that TLC did not check all reachable states
   because two distinct states had the same fingerprint:
-  calculated (optimistic):  val = 8.2E-5
-  based on the actual fingerprints:  val = 2.0E-4
+  calculated (optimistic):  val = 5.8E-7
+  based on the actual fingerprints:  val = 1.4E-6
 @!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2020-11-06 15:36:44
+The coverage statistics at 2020-11-09 13:10:31
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2773:0 @!@!@
-<Init line 55, col 1 to line 55, col 4 of module recycler>: 24883200:24883200
+<Init line 55, col 1 to line 55, col 4 of module recycler>: 2073600:2073600
 @!@!@ENDMSG 2773 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 56, col 12 to line 56, col 54 of module recycler: 1
@@ -345,111 +123,104 @@ The coverage statistics at 2020-11-06 15:36:44
   line 59, col 12 to line 59, col 58 of module recycler: 100
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 60, col 22 to line 60, col 37 of module recycler: 100
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2775:0 @!@!@
-  |line 45, col 20 to line 45, col 50 of module recycler: 100:124416000
-@!@!@ENDMSG 2775 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 60, col 33 to line 60, col 36 of module recycler: 500
+  line 60, col 12 to line 60, col 36 of module recycler: 100
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 61, col 12 to line 61, col 23 of module recycler: 24883200
+  line 61, col 12 to line 61, col 23 of module recycler: 2073600
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Lbl_1 line 63, col 1 to line 63, col 5 of module recycler>: 36148178:60701845
+<Lbl_1 line 63, col 1 to line 63, col 5 of module recycler>: 3062536:5031026
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 63, col 13 to line 63, col 24 of module recycler: 121733223
+  line 63, col 13 to line 63, col 24 of module recycler: 10167162
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 63, col 13 to line 63, col 14 of module recycler: 61031378
+  |line 63, col 13 to line 63, col 14 of module recycler: 5136136
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 64, col 16 to line 64, col 28 of module recycler: 60701845
+  line 64, col 16 to line 64, col 28 of module recycler: 5031026
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 66, col 29 to line 66, col 48 of module recycler: 60372312
+  line 66, col 29 to line 66, col 48 of module recycler: 4925916
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 67, col 32 to line 67, col 90 of module recycler: 60372312
+  line 67, col 32 to line 67, col 90 of module recycler: 4925916
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 67, col 32 to line 67, col 55 of module recycler: 60372312
+  |line 67, col 32 to line 67, col 55 of module recycler: 4925916
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 67, col 60 to line 67, col 90 of module recycler: 30186156
+  |line 67, col 60 to line 67, col 90 of module recycler: 2462958
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 68, col 37 to line 70, col 98 of module recycler: 16312816
+  line 68, col 37 to line 70, col 98 of module recycler: 1346855
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 71, col 43 to line 71, col 71 of module recycler: 44059496
+  line 71, col 43 to line 71, col 71 of module recycler: 3579061
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 72, col 48 to line 74, col 105 of module recycler: 22697015
+  line 72, col 48 to line 74, col 105 of module recycler: 1866715
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 75, col 51 to line 75, col 54 of module recycler: 21362481
+  line 75, col 51 to line 75, col 54 of module recycler: 1712346
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 76, col 51 to line 77, col 71 of module recycler: 21362481
+  line 76, col 51 to line 77, col 71 of module recycler: 1712346
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 78, col 24 to line 78, col 36 of module recycler: 60372312
+  line 78, col 24 to line 78, col 36 of module recycler: 4925916
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 79, col 24 to line 80, col 75 of module recycler: 329533
+  line 79, col 24 to line 80, col 75 of module recycler: 105110
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 81, col 24 to line 82, col 75 of module recycler: 329533
+  line 81, col 24 to line 82, col 75 of module recycler: 105110
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 83, col 24 to line 84, col 75 of module recycler: 329533
+  line 83, col 24 to line 84, col 75 of module recycler: 105110
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 85, col 24 to line 85, col 35 of module recycler: 329533
+  line 85, col 24 to line 85, col 35 of module recycler: 105110
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 86, col 24 to line 86, col 67 of module recycler: 329533
+  line 86, col 24 to line 86, col 67 of module recycler: 105110
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 87, col 13 to line 87, col 24 of module recycler: 60701845
+  line 87, col 13 to line 87, col 24 of module recycler: 5031026
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Terminating line 90, col 1 to line 90, col 11 of module recycler>: 0:329533
+<Terminating line 90, col 1 to line 90, col 11 of module recycler>: 0:105110
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 90, col 16 to line 90, col 26 of module recycler: 61360911
+  line 90, col 16 to line 90, col 26 of module recycler: 5241246
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 90, col 16 to line 90, col 17 of module recycler: 61031378
+  |line 90, col 16 to line 90, col 17 of module recycler: 5136136
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 90, col 31 to line 90, col 44 of module recycler: 329533
+  line 90, col 31 to line 90, col 44 of module recycler: 105110
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2774:0 @!@!@
 <Invariant line 50, col 1 to line 50, col 9 of module recycler>
 @!@!@ENDMSG 2774 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 50, col 14 to line 50, col 43 of module recycler: 61031378
+  line 50, col 14 to line 50, col 43 of module recycler: 5136136
 @!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2777:0 @!@!@
-End of statistics (please note that for performance reasons large models
-are best checked with coverage and cost statistics disabled).
-@!@!@ENDMSG 2777 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(7) at 2020-11-06 15:36:44: 85.914.578 states generated (15.063.439 s/min), 61.031.378 distinct states found (10.700.657 ds/min), 0 states left on queue.
+Progress(6) at 2020-11-09 13:10:31: 7.209.736 states generated (19.224.253 s/min), 5.136.136 distinct states found (13.695.145 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
-85914578 states generated, 61031378 distinct states found, 0 states left on queue.
+7209736 states generated, 5136136 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
 @!@!@STARTMSG 2194:0 @!@!@
-The depth of the complete state graph search is 7.
+The depth of the complete state graph search is 6.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2268:0 @!@!@
 The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 1 and the 95th percentile is 1).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 342287ms at (2020-11-06 15:36:44)
+Finished in 22529ms at (2020-11-09 13:10:31)
 @!@!@ENDMSG 2186 @!@!@
