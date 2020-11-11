@@ -2,14 +2,12 @@
 EXTENDS knapsack, TLC
 
 \* Constant expression definition @modelExpressionEval
-const_expr_16049506532614000 == 
+const_expr_16050103552364000 == 
 ItemSets
 ----
 
 \* Constant expression ASSUME statement @modelExpressionEval
-ASSUME PrintT(<<"$!@$!@$!@$!@$!",const_expr_16049506532614000>>)
+ASSUME PrintT(<<"$!@$!@$!@$!@$!",const_expr_16050103552364000>>)
 ----
 
 =============================================================================
-\* Modification History
-\* Created Mon Nov 09 20:37:33 CET 2020 by yeray

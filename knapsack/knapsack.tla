@@ -6,6 +6,12 @@ Items == {"a", "b", "c"}
 ItemParams == [size: 2..4, value: 0..5]
 ItemSets == [Items -> ItemParams]
 
+HardcodedItemSet == [
+  a |-> [size |-> 1, value |-> 1],
+  b |-> [size |-> 2, value |-> 3],
+  c |-> [size |-> 3, value |-> 1]
+]
+
 KnapsackSize(sack, itemset) ==
   LET size_for(item) == itemset[item].size * sack[item]
   IN PT!ReduceSet(LAMBDA item, acc: size_for(item) + acc, Items, 0)
@@ -26,9 +32,9 @@ BestKnapsack(itemset) ==
 (*--algorithm debug
 variables itemset \in ItemSets
 begin
-  assert BestKnapsack(itemset) \in ValidKnapsacks(itemset);
+  print BestKnapsack(HardcodedItemSet);
 end algorithm; *)
-\* BEGIN TRANSLATION - the hash of the PCal code: PCal-68945b317b4b1bf091b2752e15abcab9
+\* BEGIN TRANSLATION - the hash of the PCal code: PCal-9c34a2eb96b1076ea0cbb7adb6d13e7d
 VARIABLES itemset, pc
 
 vars == << itemset, pc >>
@@ -38,8 +44,7 @@ Init == (* Global variables *)
         /\ pc = "Lbl_1"
 
 Lbl_1 == /\ pc = "Lbl_1"
-         /\ Assert(BestKnapsack(itemset) \in ValidKnapsacks(itemset), 
-                   "Failure of assertion at line 29, column 3.")
+         /\ PrintT(BestKnapsack(HardcodedItemSet))
          /\ pc' = "Done"
          /\ UNCHANGED itemset
 
@@ -53,5 +58,5 @@ Spec == Init /\ [][Next]_vars
 
 Termination == <>(pc = "Done")
 
-\* END TRANSLATION - the hash of the generated TLA code (remove to silence divergence warnings): TLA-bd77f4bc4963f4773f4e894fd29c453a
+\* END TRANSLATION - the hash of the generated TLA code (remove to silence divergence warnings): TLA-fbe51fc65a34f9896de89e1678fbf9dc
 =============================================================================
