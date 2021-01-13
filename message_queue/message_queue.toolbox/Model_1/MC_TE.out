@@ -1,19 +1,19 @@
 @!@!@STARTMSG 2262:0 @!@!@
-TLC2 Version 2.15 of Day Month 20?? (rev: eb3ff99)
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with fp 56 and seed -486794494008349421 with 4 workers on 8 cores with 2398MB heap and 5392MB offheap memory [pid: 8948] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+Running breadth-first search Model-Checking with fp 30 and seed -8709378809231677129 with 6 workers on 12 cores with 2407MB heap and 5413MB offheap memory [pid: 8876] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
 @!@!@ENDMSG 2220 @!@!@
 Parsing file C:\PrivateRepos\practicaltlaplus\message_queue\message_queue.toolbox\Model_1\MC.tla
 Parsing file C:\PrivateRepos\practicaltlaplus\message_queue\message_queue.toolbox\Model_1\message_queue.tla
-Parsing file C:\Users\yeray\tla\toolbox\plugins\org.lamport.tlatools_1.0.0.202004251858\tla2sany\StandardModules\TLC.tla
-Parsing file C:\Users\yeray\tla\toolbox\plugins\org.lamport.tlatools_1.0.0.202004251858\tla2sany\StandardModules\Integers.tla
-Parsing file C:\Users\yeray\tla\toolbox\plugins\org.lamport.tlatools_1.0.0.202004251858\tla2sany\StandardModules\Sequences.tla
-Parsing file C:\Users\yeray\tla\toolbox\plugins\org.lamport.tlatools_1.0.0.202004251858\tla2sany\StandardModules\Naturals.tla
-Parsing file C:\Users\yeray\tla\toolbox\plugins\org.lamport.tlatools_1.0.0.202004251858\tla2sany\StandardModules\FiniteSets.tla
+Parsing file C:\Users\YerayCabello\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\TLC.tla
+Parsing file C:\Users\YerayCabello\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Integers.tla
+Parsing file C:\Users\YerayCabello\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Sequences.tla
+Parsing file C:\Users\YerayCabello\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Naturals.tla
+Parsing file C:\Users\YerayCabello\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\FiniteSets.tla
 Semantic processing of module Naturals
 Semantic processing of module Sequences
 Semantic processing of module FiniteSets
@@ -25,13 +25,13 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2020-12-06 21:37:53)
+Starting... (2021-01-10 20:17:02)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
 @!@!@ENDMSG 2189 @!@!@
 @!@!@STARTMSG 2190:0 @!@!@
-Finished computing initial states: 1 distinct state generated at 2020-12-06 21:37:54.
+Finished computing initial states: 1 distinct state generated at 2021-01-10 20:17:03.
 @!@!@ENDMSG 2190 @!@!@
 @!@!@STARTMSG 2114:1 @!@!@
 Deadlock reached.
@@ -41,170 +41,336 @@ The behavior up to this point is:
 @!@!@ENDMSG 2121 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 1: <Initial predicate>
+/\ val = [writer |-> "", r1 |-> "", r2 |-> ""]
+/\ stack = [writer |-> <<>>, r1 |-> <<>>, r2 |-> <<>>]
 /\ current_message = [r1 |-> "none", r2 |-> "none"]
 /\ pc = [writer |-> "Write", r1 |-> "Read", r2 |-> "Read"]
 /\ queue = <<>>
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-2: <Write line 61, col 10 to line 66, col 37 of module message_queue>
+2: <Write line 76, col 10 to line 83, col 50 of module message_queue>
+/\ val = [writer |-> "msg", r1 |-> "", r2 |-> ""]
+/\ stack = [ writer |-> <<[pc |-> "Write", val |-> "", procedure |-> "add_to_queue"]>>,
+  r1 |-> <<>>,
+  r2 |-> <<>> ]
+/\ current_message = [r1 |-> "none", r2 |-> "none"]
+/\ pc = [writer |-> "Add", r1 |-> "Read", r2 |-> "Read"]
+/\ queue = <<>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <Add line 66, col 14 to line 72, col 41 of module message_queue>
+/\ val = [writer |-> "", r1 |-> "", r2 |-> ""]
+/\ stack = [writer |-> <<>>, r1 |-> <<>>, r2 |-> <<>>]
 /\ current_message = [r1 |-> "none", r2 |-> "none"]
 /\ pc = [writer |-> "Write", r1 |-> "Read", r2 |-> "Read"]
 /\ queue = <<"msg">>
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-3: <Write line 61, col 10 to line 66, col 37 of module message_queue>
+4: <Write line 76, col 10 to line 83, col 50 of module message_queue>
+/\ val = [writer |-> "msg", r1 |-> "", r2 |-> ""]
+/\ stack = [ writer |-> <<[pc |-> "Write", val |-> "", procedure |-> "add_to_queue"]>>,
+  r1 |-> <<>>,
+  r2 |-> <<>> ]
+/\ current_message = [r1 |-> "none", r2 |-> "none"]
+/\ pc = [writer |-> "Add", r1 |-> "Read", r2 |-> "Read"]
+/\ queue = <<"msg">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <Add line 66, col 14 to line 72, col 41 of module message_queue>
+/\ val = [writer |-> "", r1 |-> "", r2 |-> ""]
+/\ stack = [writer |-> <<>>, r1 |-> <<>>, r2 |-> <<>>]
 /\ current_message = [r1 |-> "none", r2 |-> "none"]
 /\ pc = [writer |-> "Write", r1 |-> "Read", r2 |-> "Read"]
 /\ queue = <<"msg", "msg">>
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-4: <Read line 70, col 15 to line 76, col 66 of module message_queue>
-/\ current_message = [r1 |-> "msg", r2 |-> "none"]
-/\ pc = [writer |-> "Write", r1 |-> "NotifyFailure", r2 |-> "Read"]
-/\ queue = <<"msg">>
-
-@!@!@ENDMSG 2217 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-5: <Write line 61, col 10 to line 66, col 37 of module message_queue>
-/\ current_message = [r1 |-> "msg", r2 |-> "none"]
-/\ pc = [writer |-> "Write", r1 |-> "NotifyFailure", r2 |-> "Read"]
+6: <Write line 76, col 10 to line 83, col 50 of module message_queue>
+/\ val = [writer |-> "msg", r1 |-> "", r2 |-> ""]
+/\ stack = [ writer |-> <<[pc |-> "Write", val |-> "", procedure |-> "add_to_queue"]>>,
+  r1 |-> <<>>,
+  r2 |-> <<>> ]
+/\ current_message = [r1 |-> "none", r2 |-> "none"]
+/\ pc = [writer |-> "Add", r1 |-> "Read", r2 |-> "Read"]
 /\ queue = <<"msg", "msg">>
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-6: <Read line 70, col 15 to line 76, col 66 of module message_queue>
-/\ current_message = [r1 |-> "msg", r2 |-> "msg"]
-/\ pc = [writer |-> "Write", r1 |-> "NotifyFailure", r2 |-> "NotifyFailure"]
-/\ queue = <<"msg">>
+7: <Add line 66, col 14 to line 72, col 41 of module message_queue>
+/\ val = [writer |-> "", r1 |-> "", r2 |-> ""]
+/\ stack = [writer |-> <<>>, r1 |-> <<>>, r2 |-> <<>>]
+/\ current_message = [r1 |-> "none", r2 |-> "none"]
+/\ pc = [writer |-> "Write", r1 |-> "Read", r2 |-> "Read"]
+/\ queue = <<"msg", "msg", "msg">>
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-7: <Write line 61, col 10 to line 66, col 37 of module message_queue>
-/\ current_message = [r1 |-> "msg", r2 |-> "msg"]
-/\ pc = [writer |-> "Write", r1 |-> "NotifyFailure", r2 |-> "NotifyFailure"]
-/\ queue = <<"msg", "msg">>
+8: <Write line 76, col 10 to line 83, col 50 of module message_queue>
+/\ val = [writer |-> "msg", r1 |-> "", r2 |-> ""]
+/\ stack = [ writer |-> <<[pc |-> "Write", val |-> "", procedure |-> "add_to_queue"]>>,
+  r1 |-> <<>>,
+  r2 |-> <<>> ]
+/\ current_message = [r1 |-> "none", r2 |-> "none"]
+/\ pc = [writer |-> "Add", r1 |-> "Read", r2 |-> "Read"]
+/\ queue = <<"msg", "msg", "msg">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+9: <Add line 66, col 14 to line 72, col 41 of module message_queue>
+/\ val = [writer |-> "", r1 |-> "", r2 |-> ""]
+/\ stack = [writer |-> <<>>, r1 |-> <<>>, r2 |-> <<>>]
+/\ current_message = [r1 |-> "none", r2 |-> "none"]
+/\ pc = [writer |-> "Write", r1 |-> "Read", r2 |-> "Read"]
+/\ queue = <<"msg", "msg", "msg", "msg">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+10: <Write line 76, col 10 to line 83, col 50 of module message_queue>
+/\ val = [writer |-> "msg", r1 |-> "", r2 |-> ""]
+/\ stack = [ writer |-> <<[pc |-> "Write", val |-> "", procedure |-> "add_to_queue"]>>,
+  r1 |-> <<>>,
+  r2 |-> <<>> ]
+/\ current_message = [r1 |-> "none", r2 |-> "none"]
+/\ pc = [writer |-> "Add", r1 |-> "Read", r2 |-> "Read"]
+/\ queue = <<"msg", "msg", "msg", "msg">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+11: <Add line 66, col 14 to line 72, col 41 of module message_queue>
+/\ val = [writer |-> "", r1 |-> "", r2 |-> ""]
+/\ stack = [writer |-> <<>>, r1 |-> <<>>, r2 |-> <<>>]
+/\ current_message = [r1 |-> "none", r2 |-> "none"]
+/\ pc = [writer |-> "Write", r1 |-> "Read", r2 |-> "Read"]
+/\ queue = <<"msg", "msg", "msg", "msg", "msg">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+12: <Write line 76, col 10 to line 83, col 50 of module message_queue>
+/\ val = [writer |-> "msg", r1 |-> "", r2 |-> ""]
+/\ stack = [ writer |-> <<[pc |-> "Write", val |-> "", procedure |-> "add_to_queue"]>>,
+  r1 |-> <<>>,
+  r2 |-> <<>> ]
+/\ current_message = [r1 |-> "none", r2 |-> "none"]
+/\ pc = [writer |-> "Add", r1 |-> "Read", r2 |-> "Read"]
+/\ queue = <<"msg", "msg", "msg", "msg", "msg">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+13: <Read line 87, col 15 to line 94, col 43 of module message_queue>
+/\ val = [writer |-> "msg", r1 |-> "", r2 |-> ""]
+/\ stack = [ writer |-> <<[pc |-> "Write", val |-> "", procedure |-> "add_to_queue"]>>,
+  r1 |-> <<>>,
+  r2 |-> <<>> ]
+/\ current_message = [r1 |-> "msg", r2 |-> "none"]
+/\ pc = [writer |-> "Add", r1 |-> "NotifyFailure", r2 |-> "Read"]
+/\ queue = <<"msg", "msg", "msg", "msg">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+14: <Add line 66, col 14 to line 72, col 41 of module message_queue>
+/\ val = [writer |-> "", r1 |-> "", r2 |-> ""]
+/\ stack = [writer |-> <<>>, r1 |-> <<>>, r2 |-> <<>>]
+/\ current_message = [r1 |-> "msg", r2 |-> "none"]
+/\ pc = [writer |-> "Write", r1 |-> "NotifyFailure", r2 |-> "Read"]
+/\ queue = <<"msg", "msg", "msg", "msg", "msg">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+15: <Write line 76, col 10 to line 83, col 50 of module message_queue>
+/\ val = [writer |-> "msg", r1 |-> "", r2 |-> ""]
+/\ stack = [ writer |-> <<[pc |-> "Write", val |-> "", procedure |-> "add_to_queue"]>>,
+  r1 |-> <<>>,
+  r2 |-> <<>> ]
+/\ current_message = [r1 |-> "msg", r2 |-> "none"]
+/\ pc = [writer |-> "Add", r1 |-> "NotifyFailure", r2 |-> "Read"]
+/\ queue = <<"msg", "msg", "msg", "msg", "msg">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+16: <NotifyFailure line 96, col 24 to line 104, col 40 of module message_queue>
+/\ val = [writer |-> "msg", r1 |-> "r1", r2 |-> ""]
+/\ stack = [ writer |-> <<[pc |-> "Write", val |-> "", procedure |-> "add_to_queue"]>>,
+  r1 |-> <<[pc |-> "Read", val |-> "", procedure |-> "add_to_queue"]>>,
+  r2 |-> <<>> ]
+/\ current_message = [r1 |-> "none", r2 |-> "none"]
+/\ pc = [writer |-> "Add", r1 |-> "Add", r2 |-> "Read"]
+/\ queue = <<"msg", "msg", "msg", "msg", "msg">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+17: <Read line 87, col 15 to line 94, col 43 of module message_queue>
+/\ val = [writer |-> "msg", r1 |-> "r1", r2 |-> ""]
+/\ stack = [ writer |-> <<[pc |-> "Write", val |-> "", procedure |-> "add_to_queue"]>>,
+  r1 |-> <<[pc |-> "Read", val |-> "", procedure |-> "add_to_queue"]>>,
+  r2 |-> <<>> ]
+/\ current_message = [r1 |-> "none", r2 |-> "msg"]
+/\ pc = [writer |-> "Add", r1 |-> "Add", r2 |-> "NotifyFailure"]
+/\ queue = <<"msg", "msg", "msg", "msg">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+18: <Add line 66, col 14 to line 72, col 41 of module message_queue>
+/\ val = [writer |-> "", r1 |-> "r1", r2 |-> ""]
+/\ stack = [ writer |-> <<>>,
+  r1 |-> <<[pc |-> "Read", val |-> "", procedure |-> "add_to_queue"]>>,
+  r2 |-> <<>> ]
+/\ current_message = [r1 |-> "none", r2 |-> "msg"]
+/\ pc = [writer |-> "Write", r1 |-> "Add", r2 |-> "NotifyFailure"]
+/\ queue = <<"msg", "msg", "msg", "msg", "msg">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+19: <Write line 76, col 10 to line 83, col 50 of module message_queue>
+/\ val = [writer |-> "msg", r1 |-> "r1", r2 |-> ""]
+/\ stack = [ writer |-> <<[pc |-> "Write", val |-> "", procedure |-> "add_to_queue"]>>,
+  r1 |-> <<[pc |-> "Read", val |-> "", procedure |-> "add_to_queue"]>>,
+  r2 |-> <<>> ]
+/\ current_message = [r1 |-> "none", r2 |-> "msg"]
+/\ pc = [writer |-> "Add", r1 |-> "Add", r2 |-> "NotifyFailure"]
+/\ queue = <<"msg", "msg", "msg", "msg", "msg">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+20: <NotifyFailure line 96, col 24 to line 104, col 40 of module message_queue>
+/\ val = [writer |-> "msg", r1 |-> "r1", r2 |-> "r2"]
+/\ stack = [ writer |-> <<[pc |-> "Write", val |-> "", procedure |-> "add_to_queue"]>>,
+  r1 |-> <<[pc |-> "Read", val |-> "", procedure |-> "add_to_queue"]>>,
+  r2 |-> <<[pc |-> "Read", val |-> "", procedure |-> "add_to_queue"]>> ]
+/\ current_message = [r1 |-> "none", r2 |-> "none"]
+/\ pc = [writer |-> "Add", r1 |-> "Add", r2 |-> "Add"]
+/\ queue = <<"msg", "msg", "msg", "msg", "msg">>
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2020-12-06 21:37:54
+The coverage statistics at 2021-01-10 20:17:03
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2773:0 @!@!@
-<Init line 54, col 1 to line 54, col 4 of module message_queue>: 2:2
+<Init line 56, col 1 to line 56, col 4 of module message_queue>: 2:2
 @!@!@ENDMSG 2773 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 55, col 9 to line 59, col 75 of module message_queue: 2
+  line 57, col 9 to line 64, col 75 of module message_queue: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Write line 61, col 1 to line 61, col 5 of module message_queue>: 51:87
+<Add line 66, col 1 to line 66, col 9 of module message_queue>: 1291:2869
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 61, col 13 to line 61, col 34 of module message_queue: 211
+  line 66, col 17 to line 66, col 32 of module message_queue: 17939
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 61, col 13 to line 61, col 24 of module message_queue: 124
+  |line 66, col 17 to line 66, col 24 of module message_queue: 15070
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 62, col 13 to line 62, col 37 of module message_queue: 87
+  line 67, col 17 to line 67, col 41 of module message_queue: 2869
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 62, col 13 to line 62, col 22 of module message_queue: 124
+  |line 67, col 17 to line 67, col 26 of module message_queue: 3355
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 62, col 26 to line 62, col 37 of module message_queue: 124
+  |line 67, col 30 to line 67, col 41 of module message_queue: 3355
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 63, col 13 to line 63, col 37 of module message_queue: 87
+  line 68, col 17 to line 68, col 49 of module message_queue: 2869
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 64, col 13 to line 64, col 41 of module message_queue: 87
+  line 69, col 17 to line 69, col 64 of module message_queue: 2869
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 65, col 13 to line 65, col 51 of module message_queue: 87
+  line 70, col 17 to line 70, col 67 of module message_queue: 2869
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 66, col 13 to line 66, col 37 of module message_queue: 87
+  line 71, col 17 to line 71, col 67 of module message_queue: 2869
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 72, col 17 to line 72, col 41 of module message_queue: 2869
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Read line 70, col 1 to line 70, col 10 of module message_queue>: 102:250
+<Write line 76, col 1 to line 76, col 5 of module message_queue>: 600:2875
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 70, col 18 to line 70, col 34 of module message_queue: 364
+  line 76, col 13 to line 76, col 34 of module message_queue: 7911
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 70, col 18 to line 70, col 25 of module message_queue: 239
+  |line 76, col 13 to line 76, col 24 of module message_queue: 5036
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 71, col 18 to line 71, col 30 of module message_queue: 290
+  line 77, col 13 to line 81, col 54 of module message_queue: 2875
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 71, col 18 to line 71, col 22 of module message_queue: 165
+  line 82, col 13 to line 82, col 49 of module message_queue: 2875
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 71, col 27 to line 71, col 30 of module message_queue: 165
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 72, col 18 to line 72, col 82 of module message_queue: 125
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 73, col 18 to line 73, col 37 of module message_queue: 125
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 74, col 18 to line 76, col 66 of module message_queue: 125
+  line 83, col 13 to line 83, col 50 of module message_queue: 2875
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<NotifyFailure line 78, col 1 to line 78, col 19 of module message_queue>: 28:58
+<Read line 87, col 1 to line 87, col 10 of module message_queue>: 3618:11808
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 78, col 27 to line 78, col 52 of module message_queue: 295
+  line 87, col 18 to line 87, col 34 of module message_queue: 15944
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 78, col 27 to line 78, col 34 of module message_queue: 237
+  |line 87, col 18 to line 87, col 25 of module message_queue: 10040
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 79, col 27 to line 79, col 86 of module message_queue: 58
+  line 88, col 18 to line 88, col 30 of module message_queue: 11936
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 79, col 46 to line 79, col 86 of module message_queue: 74
+  |line 88, col 18 to line 88, col 22 of module message_queue: 6032
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 80, col 27 to line 80, col 51 of module message_queue: 58
+  |line 88, col 27 to line 88, col 30 of module message_queue: 6032
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 80, col 27 to line 80, col 36 of module message_queue: 74
+  line 89, col 18 to line 89, col 82 of module message_queue: 5904
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 80, col 40 to line 80, col 51 of module message_queue: 74
+  line 90, col 18 to line 90, col 37 of module message_queue: 5904
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 81, col 27 to line 81, col 54 of module message_queue: 58
+  line 91, col 18 to line 93, col 66 of module message_queue: 5904
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 82, col 27 to line 82, col 60 of module message_queue: 58
+  line 94, col 18 to line 94, col 43 of module message_queue: 11808
 @!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2774:0 @!@!@
-<BoundedQueue line 46, col 1 to line 46, col 12 of module message_queue>
-@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<NotifyFailure line 96, col 1 to line 96, col 19 of module message_queue>: 960:2814
+@!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 46, col 17 to line 46, col 42 of module message_queue: 182
+  line 96, col 27 to line 96, col 52 of module message_queue: 12852
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 96, col 27 to line 96, col 34 of module message_queue: 10038
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 97, col 27 to line 97, col 86 of module message_queue: 2814
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 98, col 27 to line 102, col 63 of module message_queue: 2814
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 103, col 27 to line 103, col 59 of module message_queue: 2814
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 104, col 27 to line 104, col 40 of module message_queue: 2814
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(9) at 2020-12-06 21:37:54: 388 states generated (14.809 s/min), 182 distinct states found (6.946 ds/min), 64 states left on queue.
+Progress(22) at 2021-01-10 20:17:03: 20,346 states generated (660,584 s/min), 6,470 distinct states found (210,064 ds/min), 1,453 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
-388 states generated, 182 distinct states found, 64 states left on queue.
+20346 states generated, 6470 distinct states found, 1453 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
 @!@!@STARTMSG 2194:0 @!@!@
-The depth of the complete state graph search is 9.
+The depth of the complete state graph search is 22.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2268:0 @!@!@
-The average outdegree of the complete state graph is 2 (minimum is 0, the maximum 5 and the 95th percentile is 4).
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 5 and the 95th percentile is 4).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 1583ms at (2020-12-06 21:37:54)
+Finished in 1858ms at (2021-01-10 20:17:03)
 @!@!@ENDMSG 2186 @!@!@
