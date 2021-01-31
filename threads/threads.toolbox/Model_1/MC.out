@@ -1,0 +1,256 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 83 and seed 3802211785686381179 with 6 workers on 12 cores with 2407MB heap and 5413MB offheap memory [pid: 12200] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file C:\PrivateRepos\practicaltlaplus\threads\threads.toolbox\Model_1\MC.tla
+Parsing file C:\PrivateRepos\practicaltlaplus\threads\threads.toolbox\Model_1\threads.tla
+Parsing file C:\Users\YerayCabello\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\TLC.tla
+Parsing file C:\Users\YerayCabello\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Integers.tla
+Parsing file C:\Users\YerayCabello\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Naturals.tla
+Parsing file C:\Users\YerayCabello\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Sequences.tla
+Parsing file C:\Users\YerayCabello\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module Integers
+Semantic processing of module threads
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2021-01-31 07:43:16)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2212:0 @!@!@
+Implied-temporal checking--satisfiability problem has 2 branches.
+@!@!@ENDMSG 2212 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2021-01-31 07:43:16.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(9) at 2021-01-31 07:43:16: 70 states generated, 41 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2192:0 @!@!@
+Checking 2 branches of temporal properties for the complete state space with 82 total distinct states at (2021-01-31 07:43:16)
+@!@!@ENDMSG 2192 @!@!@
+@!@!@STARTMSG 2116:1 @!@!@
+Temporal properties were violated.
+
+@!@!@ENDMSG 2116 @!@!@
+@!@!@STARTMSG 2264:1 @!@!@
+The following behavior constitutes a counter-example:
+
+@!@!@ENDMSG 2264 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ flag = <<FALSE, FALSE>>
+/\ pc = <<"P1", "P1">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <P1 line 31, col 13 to line 33, col 47 of module threads>
+/\ flag = <<FALSE, TRUE>>
+/\ pc = <<"P1", "P2">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <P2 line 35, col 13 to line 39, col 27 of module threads>
+/\ flag = <<FALSE, TRUE>>
+/\ pc = <<"P1", "CS">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <P1 line 31, col 13 to line 33, col 47 of module threads>
+/\ flag = <<TRUE, TRUE>>
+/\ pc = <<"P2", "CS">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <CS line 49, col 13 to line 52, col 27 of module threads>
+/\ flag = <<TRUE, TRUE>>
+/\ pc = <<"P2", "P3">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <P3 line 54, col 13 to line 56, col 49 of module threads>
+/\ flag = <<TRUE, FALSE>>
+/\ pc = <<"P2", "Done">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2218:4 @!@!@
+7: Stuttering
+@!@!@ENDMSG 2218 @!@!@
+@!@!@STARTMSG 2267:0 @!@!@
+Finished checking temporal properties in 00s at 2021-01-31 07:43:16
+@!@!@ENDMSG 2267 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2021-01-31 07:43:16
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 27, col 1 to line 27, col 4 of module threads>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 28, col 9 to line 29, col 43 of module threads: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<P1 line 31, col 1 to line 31, col 8 of module threads>: 8:19
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 31, col 16 to line 31, col 30 of module threads: 124
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 31, col 16 to line 31, col 23 of module threads: 105
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 32, col 16 to line 32, col 51 of module threads: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 33, col 16 to line 33, col 47 of module threads: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<P2 line 35, col 1 to line 35, col 8 of module threads>: 11:25
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 35, col 16 to line 35, col 30 of module threads: 128
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 35, col 16 to line 35, col 23 of module threads: 103
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 36, col 19 to line 36, col 52 of module threads: 25
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 37, col 24 to line 37, col 60 of module threads: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 38, col 24 to line 38, col 58 of module threads: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 39, col 16 to line 39, col 27 of module threads: 25
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<P2_1 line 41, col 1 to line 41, col 10 of module threads>: 6:12
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 41, col 18 to line 41, col 34 of module threads: 114
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 41, col 18 to line 41, col 25 of module threads: 102
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 42, col 18 to line 42, col 54 of module threads: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 43, col 18 to line 43, col 51 of module threads: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<P2_2 line 45, col 1 to line 45, col 10 of module threads>: 0:12
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 45, col 18 to line 45, col 34 of module threads: 114
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 45, col 18 to line 45, col 25 of module threads: 102
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 46, col 18 to line 46, col 53 of module threads: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 47, col 18 to line 47, col 49 of module threads: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<CS line 49, col 1 to line 49, col 8 of module threads>: 8:12
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 49, col 16 to line 49, col 30 of module threads: 114
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 49, col 16 to line 49, col 23 of module threads: 102
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 50, col 16 to line 50, col 19 of module threads: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 16 to line 51, col 47 of module threads: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 52, col 16 to line 52, col 27 of module threads: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<P3 line 54, col 1 to line 54, col 8 of module threads>: 7:11
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 54, col 16 to line 54, col 30 of module threads: 112
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 54, col 16 to line 54, col 23 of module threads: 101
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 16 to line 55, col 52 of module threads: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 16 to line 56, col 49 of module threads: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Terminating line 62, col 1 to line 62, col 11 of module threads>: 0:1
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 62, col 40 to line 62, col 56 of module threads: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 62, col 40 to line 62, col 47 of module threads: 55
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 62, col 31 to line 62, col 37 of module threads: 48
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 63, col 19 to line 63, col 32 of module threads: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<AtMostOneCritical line 74, col 1 to line 74, col 17 of module threads>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 75, col 3 to line 76, col 49 of module threads: 41
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 76, col 5 to line 76, col 49 of module threads: 164
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 76, col 5 to line 76, col 12 of module threads: 164
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 76, col 17 to line 76, col 49 of module threads: 82
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 76, col 19 to line 76, col 48 of module threads: 82
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 76, col 19 to line 76, col 31 of module threads: 82
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 76, col 36 to line 76, col 48 of module threads: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 75, col 17 to line 75, col 23 of module threads: 41
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(9) at 2021-01-31 07:43:16: 70 states generated (2,681 s/min), 41 distinct states found (1,570 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+70 states generated, 41 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 1576ms at (2021-01-31 07:43:16)
+@!@!@ENDMSG 2186 @!@!@
