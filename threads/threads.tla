@@ -4,7 +4,7 @@ CONSTANT Threads
 (*--algorithm dekker
 variables flag = [t \in Threads |-> FALSE]
 
-process thread \in Threads
+fair process thread \in Threads
 begin
   P1: flag[self] := TRUE;
   P2: 
@@ -14,10 +14,11 @@ begin
     end while;
   CS: skip;
   P3: flag[self] := FALSE;
+  P4: goto P1;
 end process;
 
 end algorithm; *)
-\* BEGIN TRANSLATION (chksum(pcal) = "a5efac1c" /\ chksum(tla) = "c0f80aaf")
+\* BEGIN TRANSLATION (chksum(pcal) = "cb2a128a" /\ chksum(tla) = "77391a61")
 VARIABLES flag, pc
 
 vars == << flag, pc >>
@@ -53,10 +54,14 @@ CS(self) == /\ pc[self] = "CS"
 
 P3(self) == /\ pc[self] = "P3"
             /\ flag' = [flag EXCEPT ![self] = FALSE]
-            /\ pc' = [pc EXCEPT ![self] = "Done"]
+            /\ pc' = [pc EXCEPT ![self] = "P4"]
+
+P4(self) == /\ pc[self] = "P4"
+            /\ pc' = [pc EXCEPT ![self] = "P1"]
+            /\ flag' = flag
 
 thread(self) == P1(self) \/ P2(self) \/ P2_1(self) \/ P2_2(self)
-                   \/ CS(self) \/ P3(self)
+                   \/ CS(self) \/ P3(self) \/ P4(self)
 
 (* Allow infinite stuttering to prevent deadlock on termination. *)
 Terminating == /\ \A self \in ProcSet: pc[self] = "Done"
@@ -65,7 +70,8 @@ Terminating == /\ \A self \in ProcSet: pc[self] = "Done"
 Next == (\E self \in Threads: thread(self))
            \/ Terminating
 
-Spec == Init /\ [][Next]_vars
+Spec == /\ Init /\ [][Next]_vars
+        /\ \A self \in Threads : WF_vars(thread(self))
 
 Termination == <>(\A self \in ProcSet: pc[self] = "Done")
 
