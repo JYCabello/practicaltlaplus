@@ -2,7 +2,7 @@
 TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with fp 35 and seed 2326158638058099578 with 6 workers on 12 cores with 2407MB heap and 5413MB offheap memory [pid: 24192] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+Running breadth-first search Model-Checking with fp 29 and seed 9169396750681361848 with 6 workers on 12 cores with 2407MB heap and 5413MB offheap memory [pid: 13972] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
@@ -25,194 +25,287 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2021-02-01 20:22:08)
+Starting... (2021-02-01 20:38:19)
 @!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2212:0 @!@!@
+Implied-temporal checking--satisfiability problem has 2 branches.
+@!@!@ENDMSG 2212 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
 @!@!@ENDMSG 2189 @!@!@
 @!@!@STARTMSG 2190:0 @!@!@
-Finished computing initial states: 1 distinct state generated at 2021-02-01 20:22:09.
+Finished computing initial states: 2 distinct states generated at 2021-02-01 20:38:19.
 @!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(16) at 2021-02-01 20:38:19: 256 states generated, 134 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2192:0 @!@!@
+Checking 2 branches of temporal properties for the complete state space with 268 total distinct states at (2021-02-01 20:38:19)
+@!@!@ENDMSG 2192 @!@!@
+@!@!@STARTMSG 2267:0 @!@!@
+Finished checking temporal properties in 00s at 2021-02-01 20:38:19
+@!@!@ENDMSG 2267 @!@!@
 @!@!@STARTMSG 2193:0 @!@!@
 Model checking completed. No error has been found.
   Estimates of the probability that TLC did not check all reachable states
   because two distinct states had the same fingerprint:
-  calculated (optimistic):  val = 1.1E-16
+  calculated (optimistic):  val = 8.9E-16
 @!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2021-02-01 20:22:09
+The coverage statistics at 2021-02-01 20:38:19
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2773:0 @!@!@
-<Init line 28, col 1 to line 28, col 4 of module threads>: 1:1
+<Init line 38, col 1 to line 38, col 4 of module threads>: 2:2
 @!@!@ENDMSG 2773 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 29, col 9 to line 30, col 43 of module threads: 1
+  line 39, col 12 to line 39, col 43 of module threads: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 40, col 12 to line 40, col 34 of module threads: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 41, col 12 to line 41, col 43 of module threads: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<P1 line 32, col 1 to line 32, col 8 of module threads>: 7:14
+<P1 line 43, col 1 to line 43, col 8 of module threads>: 18:37
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 32, col 16 to line 32, col 30 of module threads: 104
+  line 43, col 16 to line 43, col 30 of module threads: 323
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 32, col 16 to line 32, col 23 of module threads: 90
+  |line 43, col 16 to line 43, col 23 of module threads: 286
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 33, col 16 to line 33, col 51 of module threads: 14
+  line 44, col 16 to line 44, col 51 of module threads: 37
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 34, col 16 to line 34, col 47 of module threads: 14
+  line 45, col 16 to line 45, col 47 of module threads: 37
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 46, col 16 to line 46, col 36 of module threads: 37
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<P2 line 36, col 1 to line 36, col 8 of module threads>: 12:14
+<P2 line 48, col 1 to line 48, col 8 of module threads>: 26:46
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 36, col 16 to line 36, col 30 of module threads: 104
+  line 48, col 16 to line 48, col 30 of module threads: 332
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 36, col 16 to line 36, col 23 of module threads: 90
+  |line 48, col 16 to line 48, col 23 of module threads: 286
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 37, col 19 to line 37, col 52 of module threads: 14
+  line 49, col 19 to line 49, col 52 of module threads: 46
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 38, col 24 to line 38, col 60 of module threads: 8
+  line 50, col 24 to line 50, col 60 of module threads: 26
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 39, col 24 to line 39, col 58 of module threads: 6
+  line 51, col 24 to line 51, col 58 of module threads: 20
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 40, col 16 to line 40, col 27 of module threads: 14
+  line 52, col 16 to line 52, col 48 of module threads: 46
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<P2_1 line 42, col 1 to line 42, col 10 of module threads>: 5:14
+<P2_1 line 54, col 1 to line 54, col 10 of module threads>: 12:32
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 42, col 18 to line 42, col 34 of module threads: 104
+  line 54, col 18 to line 54, col 34 of module threads: 318
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 42, col 18 to line 42, col 25 of module threads: 90
+  |line 54, col 18 to line 54, col 25 of module threads: 286
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 43, col 18 to line 43, col 54 of module threads: 14
+  line 55, col 21 to line 55, col 39 of module threads: 32
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 44, col 18 to line 44, col 51 of module threads: 14
+  line 56, col 26 to line 56, col 64 of module threads: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 57, col 26 to line 57, col 60 of module threads: 18
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 58, col 18 to line 58, col 50 of module threads: 32
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<P2_2 line 46, col 1 to line 46, col 10 of module threads>: 0:14
+<P2_1_1 line 60, col 1 to line 60, col 12 of module threads>: 11:28
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 46, col 18 to line 46, col 34 of module threads: 104
+  line 60, col 20 to line 60, col 38 of module threads: 314
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 46, col 18 to line 46, col 25 of module threads: 90
+  |line 60, col 20 to line 60, col 27 of module threads: 286
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 47, col 18 to line 47, col 53 of module threads: 14
+  line 61, col 20 to line 61, col 56 of module threads: 28
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 48, col 18 to line 48, col 49 of module threads: 14
+  line 62, col 20 to line 62, col 55 of module threads: 28
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 63, col 20 to line 63, col 40 of module threads: 28
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<CS line 50, col 1 to line 50, col 8 of module threads>: 8:10
+<P2_1_2 line 65, col 1 to line 65, col 12 of module threads>: 12:18
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 50, col 16 to line 50, col 30 of module threads: 100
+  line 65, col 20 to line 65, col 38 of module threads: 304
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 50, col 16 to line 50, col 23 of module threads: 90
+  |line 65, col 20 to line 65, col 27 of module threads: 286
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 51, col 16 to line 51, col 19 of module threads: 10
+  line 66, col 20 to line 66, col 37 of module threads: 50
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 52, col 16 to line 52, col 47 of module threads: 10
+  |line 66, col 20 to line 66, col 30 of module threads: 32
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 53, col 16 to line 53, col 27 of module threads: 10
+  |line 66, col 34 to line 66, col 37 of module threads: 32
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 67, col 20 to line 67, col 55 of module threads: 18
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 20 to line 68, col 52 of module threads: 18
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<P3 line 55, col 1 to line 55, col 8 of module threads>: 8:10
+<P2_1_3 line 70, col 1 to line 70, col 12 of module threads>: 0:18
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 55, col 16 to line 55, col 30 of module threads: 100
+  line 70, col 20 to line 70, col 38 of module threads: 304
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 55, col 16 to line 55, col 23 of module threads: 90
+  |line 70, col 20 to line 70, col 27 of module threads: 286
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 56, col 16 to line 56, col 52 of module threads: 10
+  line 71, col 20 to line 71, col 55 of module threads: 18
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 57, col 16 to line 57, col 47 of module threads: 10
+  line 72, col 20 to line 72, col 51 of module threads: 18
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 73, col 20 to line 73, col 40 of module threads: 18
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<P4 line 59, col 1 to line 59, col 8 of module threads>: 4:14
+<CS line 75, col 1 to line 75, col 8 of module threads>: 19:25
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 59, col 16 to line 59, col 30 of module threads: 104
+  line 75, col 16 to line 75, col 30 of module threads: 311
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 59, col 16 to line 59, col 23 of module threads: 90
+  |line 75, col 16 to line 75, col 23 of module threads: 286
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 60, col 16 to line 60, col 47 of module threads: 14
+  line 76, col 16 to line 76, col 19 of module threads: 25
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 61, col 16 to line 61, col 27 of module threads: 14
+  line 77, col 16 to line 77, col 47 of module threads: 25
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 78, col 16 to line 78, col 48 of module threads: 25
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Terminating line 67, col 1 to line 67, col 11 of module threads>: 0:0
+<P3 line 80, col 1 to line 80, col 8 of module threads>: 12:24
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 67, col 19 to line 67, col 56 of module threads: 45
+  line 80, col 16 to line 80, col 30 of module threads: 310
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 68, col 19 to line 68, col 32 of module threads: 0
+  |line 80, col 16 to line 80, col 23 of module threads: 286
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 81, col 16 to line 82, col 33 of module threads: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 83, col 16 to line 83, col 47 of module threads: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 84, col 16 to line 84, col 27 of module threads: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<P4 line 86, col 1 to line 86, col 8 of module threads>: 13:14
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 86, col 16 to line 86, col 30 of module threads: 300
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 86, col 16 to line 86, col 23 of module threads: 286
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 87, col 16 to line 87, col 52 of module threads: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 88, col 16 to line 88, col 47 of module threads: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 89, col 16 to line 89, col 36 of module threads: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<P5 line 91, col 1 to line 91, col 8 of module threads>: 9:30
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 91, col 16 to line 91, col 30 of module threads: 316
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 91, col 16 to line 91, col 23 of module threads: 286
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 92, col 16 to line 92, col 47 of module threads: 30
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 93, col 16 to line 93, col 48 of module threads: 30
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Terminating line 100, col 1 to line 100, col 11 of module threads>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 100, col 19 to line 100, col 56 of module threads: 143
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 101, col 19 to line 101, col 32 of module threads: 0
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2774:0 @!@!@
-<AtMostOneCritical line 80, col 1 to line 80, col 17 of module threads>
+<AtMostOneCritical line 113, col 1 to line 113, col 17 of module threads>
 @!@!@ENDMSG 2774 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 81, col 3 to line 82, col 49 of module threads: 45
+  line 114, col 3 to line 115, col 49 of module threads: 134
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 82, col 5 to line 82, col 49 of module threads: 180
+  |line 115, col 5 to line 115, col 49 of module threads: 536
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 82, col 5 to line 82, col 12 of module threads: 180
+  ||line 115, col 5 to line 115, col 12 of module threads: 536
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 82, col 17 to line 82, col 49 of module threads: 90
+  ||line 115, col 17 to line 115, col 49 of module threads: 268
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 82, col 19 to line 82, col 48 of module threads: 90
+  |||line 115, col 19 to line 115, col 48 of module threads: 268
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 82, col 19 to line 82, col 31 of module threads: 90
+  ||||line 115, col 19 to line 115, col 31 of module threads: 268
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 82, col 36 to line 82, col 48 of module threads: 10
+  ||||line 115, col 36 to line 115, col 48 of module threads: 24
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 81, col 17 to line 81, col 23 of module threads: 45
+  |line 114, col 17 to line 114, col 23 of module threads: 134
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(9) at 2021-02-01 20:22:09: 91 states generated (3,273 s/min), 45 distinct states found (1,618 ds/min), 0 states left on queue.
+Progress(16) at 2021-02-01 20:38:20: 256 states generated (9,612 s/min), 134 distinct states found (5,031 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
-91 states generated, 45 distinct states found, 0 states left on queue.
+256 states generated, 134 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
 @!@!@STARTMSG 2194:0 @!@!@
-The depth of the complete state graph search is 9.
+The depth of the complete state graph search is 16.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2268:0 @!@!@
 The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 2).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 1682ms at (2021-02-01 20:22:09)
+Finished in 1608ms at (2021-02-01 20:38:20)
 @!@!@ENDMSG 2186 @!@!@
