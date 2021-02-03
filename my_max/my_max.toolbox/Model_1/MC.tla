@@ -1,15 +1,16 @@
 ---- MODULE MC ----
 EXTENDS my_max, TLC
 
-\* Constant expression definition @modelExpressionEval
-const_expr_161221288465632000 == 
-Max2(<<1,2,4,52,2>>)
+\* CONSTANT definitions @modelParameterConstants:0MaxSeqLen
+const_161238015455078000 == 
+5
 ----
 
-\* Constant expression ASSUME statement @modelExpressionEval
-ASSUME PrintT(<<"$!@$!@$!@$!@$!",const_expr_161221288465632000>>)
+\* CONSTANT definitions @modelParameterConstants:2IntSet
+const_161238015455079000 == 
+-5..5
 ----
 
 =============================================================================
 \* Modification History
-\* Created Mon Feb 01 21:54:44 CET 2021 by YerayCabello
+\* Created Wed Feb 03 20:22:34 CET 2021 by YerayCabello
