@@ -3,9 +3,10 @@ EXTENDS Integers, Sequences, TLC
 
 PT == INSTANCE PT
 
-Max(a, b) == IF a > b THEN a ELSE b
+Characters == {"a", "b", "c"}
+PadChar == " "
 
-Leftpad(c, n, str) ==
+LeftPad(c, n, str) ==
   LET
     outputLength == PT!Max(Len(str), n)
     paddingLength == CHOOSE x \in 0..n: Len(str) + x = outputLength
@@ -14,34 +15,61 @@ Leftpad(c, n, str) ==
   IN
     padding \o str 
 
-(*--algorithm leftpad
+(*--fair algorithm leftpad
+variables
+  finalLength \in 0..6,
+  inputString \in PT!SeqOf(Characters, 6),
+  output;        
+
 begin
-  print(Leftpad(" ", 2, <<"a", "a", "a">>));
-  print(Leftpad(" ", 4, <<"a", "a", "a">>));
-  print(Leftpad(" ", 6, <<"a", "a", "a">>));
-skip;
+Initializing:
+  output := inputString;
+Processing:
+  while Len(output) < finalLength do
+    output := <<PadChar>> \o output;
+  end while;
+Assertions:
+  assert output = LeftPad(PadChar, finalLength, inputString);
 end algorithm;*)
-\* BEGIN TRANSLATION (chksum(pcal) = "172a4c02" /\ chksum(tla) = "bab91400")
-VARIABLE pc
+\* BEGIN TRANSLATION (chksum(pcal) = "40420e2c" /\ chksum(tla) = "e947188b")
+CONSTANT defaultInitValue
+VARIABLES finalLength, inputString, output, pc
 
-vars == << pc >>
+vars == << finalLength, inputString, output, pc >>
 
-Init == /\ pc = "Lbl_1"
+Init == (* Global variables *)
+        /\ finalLength \in 0..6
+        /\ inputString \in PT!SeqOf(Characters, 6)
+        /\ output = defaultInitValue
+        /\ pc = "Initializing"
 
-Lbl_1 == /\ pc = "Lbl_1"
-         /\ PrintT((Leftpad(" ", 2, <<"a", "a", "a">>)))
-         /\ PrintT((Leftpad(" ", 4, <<"a", "a", "a">>)))
-         /\ PrintT((Leftpad(" ", 6, <<"a", "a", "a">>)))
-         /\ TRUE
-         /\ pc' = "Done"
+Initializing == /\ pc = "Initializing"
+                /\ output' = inputString
+                /\ pc' = "Processing"
+                /\ UNCHANGED << finalLength, inputString >>
+
+Processing == /\ pc = "Processing"
+              /\ IF Len(output) < finalLength
+                    THEN /\ output' = <<PadChar>> \o output
+                         /\ pc' = "Processing"
+                    ELSE /\ pc' = "Assertions"
+                         /\ UNCHANGED output
+              /\ UNCHANGED << finalLength, inputString >>
+
+Assertions == /\ pc = "Assertions"
+              /\ Assert(output = LeftPad(PadChar, finalLength, inputString), 
+                        "Failure of assertion at line 32, column 3.")
+              /\ pc' = "Done"
+              /\ UNCHANGED << finalLength, inputString, output >>
 
 (* Allow infinite stuttering to prevent deadlock on termination. *)
 Terminating == pc = "Done" /\ UNCHANGED vars
 
-Next == Lbl_1
+Next == Initializing \/ Processing \/ Assertions
            \/ Terminating
 
-Spec == Init /\ [][Next]_vars
+Spec == /\ Init /\ [][Next]_vars
+        /\ WF_vars(Next)
 
 Termination == <>(pc = "Done")
 
