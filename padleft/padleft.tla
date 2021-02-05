@@ -7,6 +7,7 @@ Characters == {"a", "b", "c"}
 MaxLength == 5
 
 LeftPad(c, n, str) ==
+  IF n < 0 THEN str ELSE
   LET
     outputLength == PT!Max(Len(str), n)
     paddingLength == CHOOSE x \in 0..n: Len(str) + x = outputLength
@@ -17,7 +18,7 @@ LeftPad(c, n, str) ==
 
 (*--fair algorithm leftpad
 variables
-  finalLength \in 0..MaxLength,
+  finalLength \in -1..MaxLength,
   inputString \in PT!SeqOf(Characters, MaxLength),
   padChar \in Characters,
   output;        
@@ -32,14 +33,14 @@ Iteration:
 Assertion:
   assert output = LeftPad(padChar, finalLength, inputString);
 end algorithm;*)
-\* BEGIN TRANSLATION (chksum(pcal) = "488d7b4e" /\ chksum(tla) = "13f52db4")
+\* BEGIN TRANSLATION (chksum(pcal) = "3e225c5c" /\ chksum(tla) = "8b43172")
 CONSTANT defaultInitValue
 VARIABLES finalLength, inputString, padChar, output, pc
 
 vars == << finalLength, inputString, padChar, output, pc >>
 
 Init == (* Global variables *)
-        /\ finalLength \in 0..MaxLength
+        /\ finalLength \in -1..MaxLength
         /\ inputString \in PT!SeqOf(Characters, MaxLength)
         /\ padChar \in Characters
         /\ output = defaultInitValue
@@ -60,7 +61,7 @@ Iteration == /\ pc = "Iteration"
 
 Assertion == /\ pc = "Assertion"
              /\ Assert(output = LeftPad(padChar, finalLength, inputString), 
-                       "Failure of assertion at line 33, column 3.")
+                       "Failure of assertion at line 34, column 3.")
              /\ pc' = "Done"
              /\ UNCHANGED << finalLength, inputString, padChar, output >>
 
