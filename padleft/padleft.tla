@@ -4,7 +4,7 @@ EXTENDS Integers, Sequences, TLC
 PT == INSTANCE PT
 
 Characters == {"a", "b", "c"}
-PadChar == " "
+MaxLength == 5
 
 LeftPad(c, n, str) ==
   LET
@@ -17,55 +17,57 @@ LeftPad(c, n, str) ==
 
 (*--fair algorithm leftpad
 variables
-  finalLength \in 0..6,
-  inputString \in PT!SeqOf(Characters, 6),
+  finalLength \in 0..MaxLength,
+  inputString \in PT!SeqOf(Characters, MaxLength),
+  padChar \in Characters,
   output;        
 
 begin
-Initializing:
+InitialSetup:
   output := inputString;
-Processing:
+Iteration:
   while Len(output) < finalLength do
-    output := <<PadChar>> \o output;
+    output := <<padChar>> \o output;
   end while;
-Assertions:
-  assert output = LeftPad(PadChar, finalLength, inputString);
+Assertion:
+  assert output = LeftPad(padChar, finalLength, inputString);
 end algorithm;*)
-\* BEGIN TRANSLATION (chksum(pcal) = "40420e2c" /\ chksum(tla) = "e947188b")
+\* BEGIN TRANSLATION (chksum(pcal) = "488d7b4e" /\ chksum(tla) = "13f52db4")
 CONSTANT defaultInitValue
-VARIABLES finalLength, inputString, output, pc
+VARIABLES finalLength, inputString, padChar, output, pc
 
-vars == << finalLength, inputString, output, pc >>
+vars == << finalLength, inputString, padChar, output, pc >>
 
 Init == (* Global variables *)
-        /\ finalLength \in 0..6
-        /\ inputString \in PT!SeqOf(Characters, 6)
+        /\ finalLength \in 0..MaxLength
+        /\ inputString \in PT!SeqOf(Characters, MaxLength)
+        /\ padChar \in Characters
         /\ output = defaultInitValue
-        /\ pc = "Initializing"
+        /\ pc = "InitialSetup"
 
-Initializing == /\ pc = "Initializing"
+InitialSetup == /\ pc = "InitialSetup"
                 /\ output' = inputString
-                /\ pc' = "Processing"
-                /\ UNCHANGED << finalLength, inputString >>
+                /\ pc' = "Iteration"
+                /\ UNCHANGED << finalLength, inputString, padChar >>
 
-Processing == /\ pc = "Processing"
-              /\ IF Len(output) < finalLength
-                    THEN /\ output' = <<PadChar>> \o output
-                         /\ pc' = "Processing"
-                    ELSE /\ pc' = "Assertions"
-                         /\ UNCHANGED output
-              /\ UNCHANGED << finalLength, inputString >>
+Iteration == /\ pc = "Iteration"
+             /\ IF Len(output) < finalLength
+                   THEN /\ output' = <<padChar>> \o output
+                        /\ pc' = "Iteration"
+                   ELSE /\ pc' = "Assertion"
+                        /\ UNCHANGED output
+             /\ UNCHANGED << finalLength, inputString, padChar >>
 
-Assertions == /\ pc = "Assertions"
-              /\ Assert(output = LeftPad(PadChar, finalLength, inputString), 
-                        "Failure of assertion at line 32, column 3.")
-              /\ pc' = "Done"
-              /\ UNCHANGED << finalLength, inputString, output >>
+Assertion == /\ pc = "Assertion"
+             /\ Assert(output = LeftPad(padChar, finalLength, inputString), 
+                       "Failure of assertion at line 33, column 3.")
+             /\ pc' = "Done"
+             /\ UNCHANGED << finalLength, inputString, padChar, output >>
 
 (* Allow infinite stuttering to prevent deadlock on termination. *)
 Terminating == pc = "Done" /\ UNCHANGED vars
 
-Next == Initializing \/ Processing \/ Assertions
+Next == InitialSetup \/ Iteration \/ Assertion
            \/ Terminating
 
 Spec == /\ Init /\ [][Next]_vars

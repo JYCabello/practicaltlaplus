@@ -2,7 +2,7 @@
 TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with fp 74 and seed -1970739009366333056 with 6 workers on 12 cores with 2407MB heap and 5413MB offheap memory [pid: 33180] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+Running breadth-first search Model-Checking with fp 65 and seed -2402984589113419533 with 6 workers on 12 cores with 2407MB heap and 5413MB offheap memory [pid: 17712] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
@@ -27,7 +27,7 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2021-02-05 16:10:20)
+Starting... (2021-02-05 22:55:01)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2212:0 @!@!@
 Implied-temporal checking--satisfiability problem has 1 branches.
@@ -72,197 +72,225 @@ Computed 2048 initial states...
 Computed 4096 initial states...
 @!@!@ENDMSG 2269 @!@!@
 @!@!@STARTMSG 2190:0 @!@!@
-Finished computing initial states: 7651 distinct states generated at 2021-02-05 16:10:21.
+Finished computing initial states: 6552 distinct states generated at 2021-02-05 22:55:02.
 @!@!@ENDMSG 2190 @!@!@
-@!@!@STARTMSG 2200:0 @!@!@
-Progress(10) at 2021-02-05 16:10:21: 39,059 states generated, 31,408 distinct states found, 0 states left on queue.
-@!@!@ENDMSG 2200 @!@!@
-@!@!@STARTMSG 2192:0 @!@!@
-Checking temporal properties for the complete state space with 31408 total distinct states at (2021-02-05 16:10:21)
-@!@!@ENDMSG 2192 @!@!@
-@!@!@STARTMSG 2267:0 @!@!@
-Finished checking temporal properties in 00s at 2021-02-05 16:10:22
-@!@!@ENDMSG 2267 @!@!@
-@!@!@STARTMSG 2193:0 @!@!@
-Model checking completed. No error has been found.
-  Estimates of the probability that TLC did not check all reachable states
-  because two distinct states had the same fingerprint:
-  calculated (optimistic):  val = 1.3E-11
-@!@!@ENDMSG 2193 @!@!@
+@!@!@STARTMSG 2132:1 @!@!@
+The first argument of Assert evaluated to FALSE; the second argument was:
+"Failure of assertion at line 33, column 3."
+@!@!@ENDMSG 2132 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ finalLength = 0
+/\ padChar = "b"
+/\ inputString = << >>
+/\ pc = "InitialSetup"
+/\ output = defaultInitValue
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <InitialSetup line 48, col 17 to line 51, col 68 of module padleft>
+/\ finalLength = 0
+/\ padChar = "b"
+/\ inputString = << >>
+/\ pc = "Iteration"
+/\ output = << >>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <Iteration line 53, col 14 to line 59, col 65 of module padleft>
+/\ finalLength = 0
+/\ padChar = "b"
+/\ inputString = << >>
+/\ pc = "Iteration"
+/\ output = <<"b">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <Iteration line 53, col 14 to line 59, col 65 of module padleft>
+/\ finalLength = 0
+/\ padChar = "b"
+/\ inputString = << >>
+/\ pc = "Assertion"
+/\ output = <<"b">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2103:1 @!@!@
+The error occurred when TLC was evaluating the nested
+expressions at the following positions:
+0. Line 61, column 14 to line 65, column 73 in padleft
+1. Line 61, column 17 to line 61, column 32 in padleft
+2. Line 62, column 17 to line 63, column 68 in padleft
+
+
+@!@!@ENDMSG 2103 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2021-02-05 16:10:22
+The coverage statistics at 2021-02-05 22:55:03
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2773:0 @!@!@
-<Init line 40, col 1 to line 40, col 4 of module padleft>: 7651:7651
+<Init line 41, col 1 to line 41, col 4 of module padleft>: 13104:13104
 @!@!@ENDMSG 2773 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 12 to line 41, col 31 of module padleft: 1
+  line 42, col 12 to line 42, col 39 of module padleft: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 42, col 28 to line 42, col 50 of module padleft: 7
+  line 43, col 28 to line 43, col 58 of module padleft: 12
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 57, col 18 to line 57, col 53 of module PT: 7
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2775:0 @!@!@
-  ||line 57, col 24 to line 57, col 53 of module PT: 7:7749
-@!@!@ENDMSG 2775 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 57, col 25 to line 57, col 39 of module PT: 49
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 57, col 49 to line 57, col 52 of module PT: 7
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 42, col 37 to line 42, col 46 of module padleft: 7
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 43, col 12 to line 43, col 36 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 44, col 12 to line 44, col 30 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2772:0 @!@!@
-<Initializing line 46, col 1 to line 46, col 12 of module padleft>: 7651:7651
-@!@!@ENDMSG 2772 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 46, col 20 to line 46, col 38 of module padleft: 39059
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 46, col 20 to line 46, col 21 of module padleft: 31408
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 47, col 20 to line 47, col 40 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 48, col 20 to line 48, col 37 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 49, col 20 to line 49, col 59 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2772:0 @!@!@
-<Processing line 51, col 1 to line 51, col 10 of module padleft>: 8455:8455
-@!@!@ENDMSG 2772 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 51, col 18 to line 51, col 34 of module padleft: 39863
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 51, col 18 to line 51, col 19 of module padleft: 31408
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 52, col 21 to line 52, col 45 of module padleft: 8455
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 53, col 26 to line 54, col 46 of module padleft: 804
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 55, col 29 to line 55, col 46 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 56, col 29 to line 56, col 44 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 57, col 18 to line 57, col 57 of module padleft: 8455
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2772:0 @!@!@
-<Assertions line 59, col 1 to line 59, col 10 of module padleft>: 7651:7651
-@!@!@ENDMSG 2772 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 59, col 18 to line 59, col 34 of module padleft: 39059
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 59, col 18 to line 59, col 19 of module padleft: 31408
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 60, col 18 to line 61, col 69 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |line 60, col 25 to line 60, col 75 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||line 60, col 25 to line 60, col 30 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||line 60, col 34 to line 60, col 75 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 12, col 22 to line 12, col 67 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||line 12, col 41 to line 12, col 67 of module padleft: 8455
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  ||||line 12, col 35 to line 12, col 38 of module padleft: 7651
+  |line 57, col 18 to line 57, col 53 of module PT: 12
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2775:0 @!@!@
-  |||line 14, col 16 to line 14, col 45 of module padleft: 7651:1608
+  ||line 57, col 24 to line 57, col 53 of module PT: 12:4512
 @!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 11, col 21 to line 11, col 39 of module padleft: 7651
+  |||line 57, col 25 to line 57, col 39 of module PT: 72
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 12, col 14 to line 12, col 35 of module PT: 7651
+  |||line 57, col 49 to line 57, col 52 of module PT: 12
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 12, col 17 to line 12, col 21 of module PT: 7651
+  |line 43, col 37 to line 43, col 46 of module padleft: 12
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 12, col 28 to line 12, col 28 of module PT: 6015
+  |line 43, col 49 to line 43, col 57 of module padleft: 12
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 12, col 35 to line 12, col 35 of module PT: 1636
+  line 44, col 12 to line 44, col 33 of module padleft: 4368
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 11, col 28 to line 11, col 35 of module padleft: 7651
+  line 45, col 12 to line 45, col 36 of module padleft: 13104
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 11, col 38 to line 11, col 38 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 16, col 5 to line 16, col 18 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 60, col 42 to line 60, col 48 of module padleft: 543
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 60, col 51 to line 60, col 61 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  |||line 60, col 64 to line 60, col 74 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 62, col 18 to line 62, col 29 of module padleft: 7651
-@!@!@ENDMSG 2221 @!@!@
-@!@!@STARTMSG 2221:0 @!@!@
-  line 63, col 18 to line 63, col 65 of module padleft: 7651
+  line 46, col 12 to line 46, col 30 of module padleft: 13104
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Terminating line 66, col 1 to line 66, col 11 of module padleft>: 0:7651
+<InitialSetup line 48, col 1 to line 48, col 12 of module padleft>: 6552:6553
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 66, col 16 to line 66, col 26 of module padleft: 39059
+  line 48, col 20 to line 48, col 38 of module padleft: 27310
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 66, col 16 to line 66, col 17 of module padleft: 31408
+  |line 48, col 20 to line 48, col 21 of module padleft: 20757
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 66, col 31 to line 66, col 44 of module padleft: 7651
+  line 49, col 20 to line 49, col 40 of module padleft: 6553
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 50, col 20 to line 50, col 36 of module padleft: 6553
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 20 to line 51, col 68 of module padleft: 6553
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Iteration line 53, col 1 to line 53, col 9 of module padleft>: 8183:8185
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 53, col 17 to line 53, col 32 of module padleft: 28941
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 53, col 17 to line 53, col 18 of module padleft: 20756
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 54, col 20 to line 54, col 45 of module padleft: 8185
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 25 to line 56, col 44 of module padleft: 2167
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 57, col 28 to line 57, col 44 of module padleft: 6018
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 58, col 28 to line 58, col 43 of module padleft: 6018
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 59, col 17 to line 59, col 65 of module padleft: 8185
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Assertion line 61, col 1 to line 61, col 9 of module padleft>: 4923:4923
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 61, col 17 to line 61, col 32 of module padleft: 25677
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 61, col 17 to line 61, col 18 of module padleft: 20754
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 62, col 17 to line 63, col 68 of module padleft: 4923
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 62, col 24 to line 62, col 74 of module padleft: 4930
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 62, col 24 to line 62, col 29 of module padleft: 4930
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 62, col 33 to line 62, col 74 of module padleft: 4930
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 12, col 22 to line 12, col 67 of module padleft: 4930
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 14, col 16 to line 14, col 45 of module padleft: 4930
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 11, col 21 to line 11, col 39 of module padleft: 4930
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 12, col 14 to line 12, col 35 of module PT: 4930
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 12, col 17 to line 12, col 21 of module PT: 4930
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 12, col 28 to line 12, col 28 of module PT: 4923
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 12, col 35 to line 12, col 35 of module PT: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 11, col 28 to line 11, col 35 of module padleft: 4930
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 11, col 38 to line 11, col 38 of module padleft: 4930
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 16, col 5 to line 16, col 18 of module padleft: 4930
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 62, col 50 to line 62, col 60 of module padleft: 4930
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 62, col 63 to line 62, col 73 of module padleft: 4930
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 64, col 17 to line 64, col 28 of module padleft: 4923
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 65, col 17 to line 65, col 73 of module padleft: 4923
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Terminating line 68, col 1 to line 68, col 11 of module padleft>: 0:1089
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 16 to line 68, col 26 of module padleft: 21836
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 68, col 16 to line 68, col 17 of module padleft: 20747
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 31 to line 68, col 44 of module padleft: 1089
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(10) at 2021-02-05 16:10:22: 39,059 states generated (1,165,940 s/min), 31,408 distinct states found (937,552 ds/min), 0 states left on queue.
+Progress(5) at 2021-02-05 22:55:03: 27,299 states generated (660,193 s/min), 26,210 distinct states found (633,857 ds/min), 5,457 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
-39059 states generated, 31408 distinct states found, 0 states left on queue.
+27299 states generated, 26210 distinct states found, 5457 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
-@!@!@STARTMSG 2194:0 @!@!@
-The depth of the complete state graph search is 10.
-@!@!@ENDMSG 2194 @!@!@
-@!@!@STARTMSG 2268:0 @!@!@
-The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 1 and the 95th percentile is 1).
-@!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 2017ms at (2021-02-05 16:10:22)
+Finished in 2493ms at (2021-02-05 22:55:03)
 @!@!@ENDMSG 2186 @!@!@
